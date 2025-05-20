@@ -1,0 +1,126 @@
+/* Simple and unique CSS for Stopwatch */
+body {
+  background: #f5f7fa;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.stopwatch-container {
+  max-width: 350px;
+  margin: 48px auto 16px auto;
+  background: #fff;
+  color: #222;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 #d1d9e6;
+  padding: 32px 18px 24px 18px;
+  text-align: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  border: 1.5px solid #e3e8ee;
+}
+.stopwatch-title {
+  font-size: 2rem;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #3a5a98;
+}
+.stopwatch-timer {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3a5a98;
+  margin: 18px 0 18px 0;
+  background: #f0f4fa;
+  border-radius: 10px;
+  padding: 14px 0;
+  border: 1px solid #e3e8ee;
+}
+.stopwatch-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.sw-btn {
+  background: #3a5a98;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.sw-btn:disabled {
+  background: #bfc8d6;
+  color: #888;
+  cursor: not-allowed;
+}
+.sw-btn:not(:disabled):hover {
+  background: #2d4373;
+  transform: translateY(-2px) scale(1.04);
+}
+.stopwatch-laps {
+  margin-top: 16px;
+  background: #f0f4fa;
+  border-radius: 8px;
+  padding: 10px 0 6px 0;
+  border: 1px solid #e3e8ee;
+}
+.stopwatch-laps h2 {
+  font-size: 1.1rem;
+  color: #3a5a98;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.lap-item {
+  color: #3a5a98;
+  font-size: 1rem;
+  margin: 2px 0;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+.no-laps {
+  color: #bfc8d6;
+  font-size: 0.98rem;
+  font-style: italic;
+}
+.stopwatch-footer {
+  margin: 20px auto 0 auto;
+  text-align: center;
+  color: #3a5a98;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 0.5px;
+  opacity: 0.95;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.stopwatch-footer .heart {
+  color: #e25555;
+  font-size: 1.1em;
+  margin: 0 2px;
+}
+@media (max-width: 600px) {
+  .stopwatch-container {
+    max-width: 98vw;
+    padding: 10px 2vw 12px 2vw;
+  }
+  .stopwatch-timer {
+    font-size: 1.5rem;
+    padding: 8px 0;
+  }
+  .sw-btn {
+    font-size: 0.95rem;
+    padding: 7px 10px;
+  }
+  .stopwatch-laps {
+    padding: 7px 0 4px 0;
+  }
+  .stopwatch-footer {
+    font-size: 0.95rem;
+    margin-top: 10px;
+  }
+}
